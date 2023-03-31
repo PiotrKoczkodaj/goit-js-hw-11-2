@@ -1,2 +1,9 @@
 @import './common';
 @import './example';
+
+.search-form{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    background-color: darkorange;
+}
