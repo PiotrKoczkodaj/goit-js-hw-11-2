@@ -1,2 +1,0 @@
-document.querySelector(".search-form"),document.querySelector('input[name="searchQuery"]');const e=document.body;console.log(e);fetch("https://pixabay.com/api/?key=34989150-f6282d23d45a19c7980767166&q=car&image_type=photo&orientation=horizontal&safesearch=true").then((e=>{if(!e.ok)throw new Error(e.status);return e.json()})).then((o=>{o.hits.map((o=>{e.innerHTML+=`<img src="${o.previewURL}">`,console.log(o)}))}));
-//# sourceMappingURL=index.aeaa0845.js.map
