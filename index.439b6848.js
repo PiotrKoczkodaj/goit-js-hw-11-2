@@ -1,2 +1,0 @@
-const e=document.querySelector(".search-form"),t=document.querySelector('input[name="searchQuery"]'),r=document.body;e.addEventListener("submit",(e=>{e.preventDefault();fetch(`https://pixabay.com/api/?key=34989150-f6282d23d45a19c7980767166&q=${t.value}&image_type=photo&orientation=horizontal&safesearch=true`).then((e=>{if(!e.ok)throw new Error(e.status);return e.json()})).then((e=>{e.hits.map((e=>{r.innerHTML+=`<img src="${e.previewURL}">`,console.log(e)}))}))}));
-//# sourceMappingURL=index.439b6848.js.map
