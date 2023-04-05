@@ -7,8 +7,8 @@ const body = document.body;
 
 const fetchData = async () => {
     try {
-    const response = await axios.get("https://pixabay.com/api/?key=34989150-f6282d23d45a19c7980767166&"+"q="+`${input.value}`+"&image_type=photo&orientation=horizontal&safesearch=true");
-    console.log(response);
+    const response = await axios.get("https://pixabay.com/api/?key=34989150-f6282d23d45a19c7980767166&"+"q="+`${input.value}`+"&image_type=photo&orientation=horizontal&safesearch=true?likes,views");
+    console.log(response.data.hits[0]);
   } catch (error) {
     console.error(error);
   }
