@@ -4,7 +4,7 @@ const form = document.querySelector('.search-form');
 const API_KEY = '34989150-F6282D23D45A19C7980767166'
 const input = document.querySelector('input[name="searchQuery"]')
 const body = document.body;
-
+console.log('f');
 const fetchData = async () => {
     try {
     const response = await axios.get("https://pixabay.com/api/?key=34989150-f6282d23d45a19c7980767166&"+"q="+`${input.value}`+"&image_type=photo&orientation=horizontal&safesearch=true?likes,views");
