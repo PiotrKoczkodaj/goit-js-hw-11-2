@@ -8,7 +8,9 @@ const body = document.body
 const fetchData = async () => {
     try {
       const response = await axios.get("https://pixabay.com/api/?key=34989150-f6282d23d45a19c7980767166&" + "q=" + `${input.value}` + "&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=1");
+      console.log(response.data)
       return response.data
+      
   } catch (error) {
     console.error(error);
   }
@@ -22,7 +24,7 @@ const galleryContainer = document.createElement('div');
 const data = await fetchData()
   data.hits.map((item) => {
     galleryContainer.innerHTML += `<div class="photo-card">
-  <img src="${item.previewURL}" alt="${item.tags}" loading="lazy" />
+  <img src="${item.webformatURL}" alt="${item.tags}" loading="lazy" />
   <div class="info">
     <p class="info-item">
       <b>Likes ${item.likes}</b>
