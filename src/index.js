@@ -24,19 +24,19 @@ const galleryContainer = document.createElement('div');
 const data = await fetchData()
   data.hits.map((item) => {
     galleryContainer.innerHTML += `<div class="photo-card">
-  <img src="${item.webformatURL}" alt="${item.tags}" loading="lazy" />
+  <img src="${item.webformatURL}" alt="${item.tags}" loading="lazy" height=220 width=340/>
   <div class="info">
     <p class="info-item">
       <b>Likes ${item.likes}</b>
     </p>
     <p class="info-item">
-      <b>Views${item.views}</b>
+      <b>Views ${item.views}</b>
     </p>
     <p class="info-item">
-      <b>Comments${item.comments}</b>
+      <b>Comments ${item.comments}</b>
     </p>
     <p class="info-item">
-      <b>Downloads${item.downloads}</b>
+      <b>Downloads ${item.downloads}</b>
     </p>
   </div>
 </div>`});
